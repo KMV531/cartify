@@ -36,6 +36,7 @@ export async function POST(req: NextRequest) {
     const session = event.data.object as Stripe.Checkout.Session
     try {
       const order = await createOrderInSanity(session)
+      console.log("Order created in Sanity", order)
     } catch (error) {
       console.error("Order created in sanity error:", error)
       return NextResponse.json(

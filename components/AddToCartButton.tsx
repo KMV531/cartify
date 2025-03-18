@@ -14,7 +14,7 @@ interface Props {
   className?: string
 }
 
-const AddToCartButton = ({ product, className }: Props) => {
+const AddToCartButton = ({ product }: Props) => {
   const [isClient, setIsClient] = useState(false)
   const { addItem, getItemCount } = userCartStore()
 

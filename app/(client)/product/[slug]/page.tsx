@@ -8,7 +8,6 @@ import {
   LucideStar,
   MessageCircleQuestion,
   Share2,
-  Split,
   Truck,
 } from "lucide-react"
 import Image from "next/image"

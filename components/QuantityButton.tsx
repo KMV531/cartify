@@ -11,7 +11,7 @@ interface Props {
   borderStyle?: string
 }
 
-const QuantityButton = ({ product, className, borderStyle }: Props) => {
+const QuantityButton = ({ product, className }: Props) => {
   const { addItem, removeItem, getItemCount } = userCartStore()
   const handleRemoveProduct = () => {
     removeItem(product?._id)
@@ -28,7 +28,7 @@ const QuantityButton = ({ product, className, borderStyle }: Props) => {
     toast.success("Quantity Increased Successfuly")
   }
   const itemCount = getItemCount(product?._id)
-  const isOutOfStock = () => product?.stock === 0
+  //  const isOutOfStock = () => product?.stock === 0
   return (
     <div className={cn("flex items-center gap-1 pb-1 text-base", className)}>
       <Button
