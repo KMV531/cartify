@@ -64,7 +64,8 @@ const CartPage = () => {
         orderNumber: crypto.randomUUID(),
         customerName: user?.fullName ?? "Unknown",
         customerEmail: user?.emailAddresses[0]?.emailAddress ?? "Unknown",
-        clerkUserId: user!?.id,
+        // clerkUserId: user!?.id,
+        clerkUserId: user?.id ?? "Unknown", // If `user?.id` is undefined, fallback to "Unknown"
       }
 
       const checkoutUrl = await createCheckoutSession(groupedItems, metadata)
