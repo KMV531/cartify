@@ -2,7 +2,6 @@ import { sanityFetch } from "../lib/live"
 import {
   CATEGORIES_QUERY,
   MY_ORDERS_QUERY,
-  PRODUCT_BY_CATEGORY_QUERY,
   PRODUCT_BY_SLUG,
   PRODUCT_SEARCH_QUERY,
   PRODUCTS_QUERY,
@@ -71,21 +70,6 @@ export const searchProductsByName = async (searchParam: string) => {
     return products?.data || []
   } catch (error) {
     console.error("Error fetching Product By Name:", error)
-    return []
-  }
-}
-
-export const getProductsByCategory = async (categorySlug: string) => {
-  try {
-    const products = await sanityFetch({
-      query: PRODUCT_BY_CATEGORY_QUERY,
-      params: {
-        categorySlug,
-      },
-    })
-    return products?.data || []
-  } catch (error) {
-    console.error("Error fetching Product By Category:", error)
     return []
   }
 }
