@@ -2,14 +2,12 @@ import Container from "@/components/Container"
 import ProductGrid from "@/components/ProductGrid"
 import { searchProductsByName } from "@/sanity/helpers"
 
-interface Props {
-  searchParams: {
-    query: string
-  }
-}
-
-const SearchPage = async ({ searchParams }: Props) => {
-  const { query } = searchParams
+const SearchPage = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{ query: string }>
+}) => {
+  const { query } = await searchParams
   const products = await searchProductsByName(query)
 
   if (!products?.length) {

@@ -35,7 +35,7 @@ const CartPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsClient(true)
-    }, 7000)
+    }, 4000)
 
     return () => clearTimeout(timer)
   }, [])
@@ -64,7 +64,7 @@ const CartPage = () => {
         orderNumber: crypto.randomUUID(),
         customerName: user?.fullName ?? "Unknown",
         customerEmail: user?.emailAddresses[0]?.emailAddress ?? "Unknown",
-        clerkUserId: user?.id ?? "Unknown",
+        clerkUserId: user!.id,
       }
 
       const checkoutUrl = await createCheckoutSession(groupedItems, metadata)

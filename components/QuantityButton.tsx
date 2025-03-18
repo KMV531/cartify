@@ -8,7 +8,6 @@ import userCartStore from "@/store"
 interface Props {
   product: Product
   className?: string
-  borderStyle?: string
 }
 
 const QuantityButton = ({ product, className }: Props) => {
@@ -28,7 +27,7 @@ const QuantityButton = ({ product, className }: Props) => {
     toast.success("Quantity Increased Successfuly")
   }
   const itemCount = getItemCount(product?._id)
-  //  const isOutOfStock = () => product?.stock === 0
+
   return (
     <div className={cn("flex items-center gap-1 pb-1 text-base", className)}>
       <Button
