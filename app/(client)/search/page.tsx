@@ -9,7 +9,7 @@ interface Props {
 }
 
 const SearchPage = async ({ searchParams }: Props) => {
-  const { query } = await searchParams
+  const { query } = searchParams
   const products = await searchProductsByName(query)
 
   if (!products?.length) {
