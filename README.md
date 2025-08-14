@@ -26,6 +26,7 @@
 | shadcn/ui        | Accessible UI components         |
 | Stripe           | Payment processing               |
 | TypeScript       | Type-safe development            |
+| Clerk            | User Authentication              |
 
 ## 🚀 Performance Highlights
 
