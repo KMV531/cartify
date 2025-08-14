@@ -62,13 +62,13 @@
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/yourusername/cartify.git
+   git clone https://github.com/KMV531/cartify.git
    
 2. Install dependencies:
    ```bash
    npm install
 
-3. Set up environment variables (create .env.local):
+3. Set up environment variables (create .env):
    ```bash
    NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
    NEXT_PUBLIC_SANITY_DATASET=your_public_sanity_dataset
