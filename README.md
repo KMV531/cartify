@@ -14,6 +14,7 @@
 - **Stripe Payments**: Secure payment processing
 - **Responsive Design**: Mobile-first approach
 - **Type-Safe**: Built with TypeScript
+- **Authentication**: Full user authentication system with clerk
 
 ## 🛠️ Tech Stack
 
@@ -31,7 +32,6 @@
 - **Fast Loading**: Optimized images and code splitting
 - **SEO Ready**: Next.js optimized for search engines
 - **Secure**: Sanitized inputs and protected routes
-- **Authentication**: Full user authentication system with clerk
 
 ## 🌟 Why This Stands Out
 **This isn't just another e-commerce template:**
